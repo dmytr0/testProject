@@ -5,27 +5,31 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.URI;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class EventsControllerTest {
 
     @Autowired
     private EventsController controller;
 
-//    @Autowired
-//    private TestRestTemplate restTemplate;
+    @Autowired
+    private TestRestTemplate restTemplate;
+
+    @LocalServerPort
+    private int port;
 
     @Test
     public void testCreate() throws Exception {
-        URI uri = new URI("http://localhost:8080/events/create");
-//        ResponseEntity<String> response = this.restTemplate.postForEntity(uri, request1, String.class);
-//
-//        System.out.println(respoz);
+        URI uri = new URI("http://localhost:" + port + "/events/create");
+        ResponseEntity<String> response = this.restTemplate.postForEntity(uri, request1, String.class);
+
+        System.out.println(response);
     }
 
 
