@@ -37,7 +37,6 @@ public class EventsService {
 
     public EventModel createEvent(String event) {
         EventModel model = parseEvent(event);
-        System.out.println(model.getLinks());
         EventEntity eventEntity = mapper.modelToEntity(model);
         EventEntity entity = repository.save(eventEntity);
         return convert(entity);

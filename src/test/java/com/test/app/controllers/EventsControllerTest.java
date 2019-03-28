@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.net.URI;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class EventsControllerTest {
@@ -13,16 +15,12 @@ public class EventsControllerTest {
     @Autowired
     private EventsController controller;
 
+
     @Test
-    public void testCreate() {
-
-
+    public void testCreate() throws Exception {
+        URI uri = new URI("http://localhost:8080/events/create");
 
     }
-
-
-
-
 
 
     private String request1 = "{\n" +

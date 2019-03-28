@@ -5,6 +5,50 @@ Content-type: application/json
 
 { 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
 
+<> 2019-03-28T044150.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T043948.500.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T043915.500.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T043555.500.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
 <> 2019-03-28T042654.200.json
 
 ###
