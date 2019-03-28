@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.URI;
@@ -15,11 +17,15 @@ public class EventsControllerTest {
     @Autowired
     private EventsController controller;
 
+//    @Autowired
+//    private TestRestTemplate restTemplate;
 
     @Test
     public void testCreate() throws Exception {
         URI uri = new URI("http://localhost:8080/events/create");
-
+//        ResponseEntity<String> response = this.restTemplate.postForEntity(uri, request1, String.class);
+//
+//        System.out.println(respoz);
     }
 
 
