@@ -1,0 +1,12 @@
+{
+  "eventId": "666666",
+  "entityType": "asdasd",
+  "entityId": null,
+  "type": "jdjdj",
+  "entity": "sdfasdas",
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/events/666666"
+    }
+  }
+}

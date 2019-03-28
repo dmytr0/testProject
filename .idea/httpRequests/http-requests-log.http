@@ -1,0 +1,296 @@
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T042654.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T042602.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T042129.400.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T041838.400.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T041801.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T041703.400.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T041122.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T041002.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "666666", 	"entityType": "asdasd", 	"entityId": null, 	"attributes": null, 	"type": "jdjdj", 	"entity": "sdfasdas", 	"_links": { 		"self": { 			"href": "http://localhost:8080/events/666666" 		} 	}, 	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T040741.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"Client": { 			"href": "https://int.blackhawknetwork.com/account/v1/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		}, 		"Client.local": { 			"href": "https://accountmanagement.local/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		} 	} }
+
+<> 2019-03-28T040650.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"Client": { 			"href": "https://int.blackhawknetwork.com/account/v1/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		}, 		"Client.local": { 			"href": "https://accountmanagement.local/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		} 	} }
+
+<> 2019-03-28T040342.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"Client": { 			"href": "https://int.blackhawknetwork.com/account/v1/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		}, 		"Client.local": { 			"href": "https://accountmanagement.local/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		} 	} }
+
+<> 2019-03-28T040318.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"Client": { 			"href": "https://int.blackhawknetwork.com/account/v1/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		}, 		"Client.local": { 			"href": "https://accountmanagement.local/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		} 	} }
+
+<> 2019-03-28T040217.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"Client": { 			"href": "https://int.blackhawknetwork.com/account/v1/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		}, 		"Client.local": { 			"href": "https://accountmanagement.local/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		} 	} }
+
+<> 2019-03-28T040130.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"Client": { 			"href": "https://int.blackhawknetwork.com/account/v1/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		}, 		"Client.local": { 			"href": "https://accountmanagement.local/clients/XJ0RF7TJHVQ9DJ3GR046DF2F8R" 		} 	} }
+
+<> 2019-03-28T035042.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null,   	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T034915.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null,   	"links": [{ 		"rel": "self", 		"href": "https://int.blackhawknetwork.com/billing/v1/billers/41SC2XM1AX67KG0ZG3C2QV239M/events/9R4XL2H61MR6XZNHBL57LJ9TH8", 		"hreflang": null, 		"media": null, 		"title": null, 		"type": null, 		"deprecation": null 	}] }
+
+<> 2019-03-28T034802.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"self": { 			"href": "self" 		} 	} }
+
+<> 2019-03-28T034600.200.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"self": { 			"href": "self" 		} 	} }
+
+<> 2019-03-28T025925.500.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"self": { 			"href": "self" 		} 	} }
+
+<> 2019-03-28T025857.500.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content-type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"self": { 			"href": "self" 		} 	} }
+
+<> 2019-03-28T025754.500.json
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content type: application/json
+
+{ 	"eventId": "Iddddd", 	"entityType": null, 	"entityId": null, 	"attributes": null, 	"type": null, 	"entity": null, 	"_links": { 		"self": { 			"href": "self" 		} 	} }
+
+<> 2019-03-28T025719.400.html
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content type: application/json
+
+{"eventId": "qwerty"}
+
+<> 2019-03-28T024705.400.html
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content type: application/json
+
+{"eventId": "qwerty"}
+
+<> 2019-03-28T024645.400.html
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content type: application/json
+
+{"eventId": "qwerty"}
+
+<> 2019-03-28T024627.400.html
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+Content type: application/json; charset=utf-8
+
+{"eventId": "qwerty"}
+
+<> 2019-03-28T024554.400.html
+
+###
+
+POST http://localhost:8080/events/create
+Accept: */*
+Cache-Control: no-cache
+
+{"eventId": "qwerty"}
+
+<> 2019-03-28T024458.415.json
+
+###
+
