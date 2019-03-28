@@ -1,0 +1,12 @@
+{
+  "eventId": "1111",
+  "entityType": "ZXCV",
+  "entityId": null,
+  "type": "jdjdj",
+  "entity": "sdfasdas",
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/events/1111"
+    }
+  }
+}

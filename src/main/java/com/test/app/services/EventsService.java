@@ -36,6 +36,7 @@ public class EventsService {
     }
 
     public EventModel createEvent(String event) {
+        System.out.println(event);
         EventModel model = parseEvent(event);
         EventEntity eventEntity = mapper.modelToEntity(model);
         EventEntity entity = repository.save(eventEntity);
@@ -64,7 +65,7 @@ public class EventsService {
         try {
             eventModel = objectMapper.readValue(json, EventModel.class);
         } catch (IOException e) {
-            log.error("Error parsing");
+            log.error("Error parsing "  + e.getMessage(), e);
         }
         return eventModel;
     }

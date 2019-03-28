@@ -1,5 +1,6 @@
 package com.test.app.controllers;
 
+import com.test.app.entities.EventModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,9 @@ public class EventsControllerTest {
     @Test
     public void testCreate() throws Exception {
         URI uri = new URI("http://localhost:" + port + "/events/create");
-        ResponseEntity<String> response = this.restTemplate.postForEntity(uri, request1, String.class);
+        ResponseEntity<EventModel> response = this.restTemplate.postForEntity(uri, request1, EventModel.class);
 
-        System.out.println(response);
+        System.out.println(response.getBody());
     }
 
 
