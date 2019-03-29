@@ -1,37 +1,68 @@
 package com.test.app.controllers;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.app.entities.EventModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import java.net.URI;
+import java.io.IOException;
+
+import static org.hamcrest.Matchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest
+@AutoConfigureMockMvc
 public class EventsControllerTest {
 
     @Autowired
-    private EventsController controller;
+    private MockMvc mockMvc;
 
-    @Autowired
-    private TestRestTemplate restTemplate;
-
-    @LocalServerPort
-    private int port;
 
     @Test
-    public void testCreate() throws Exception {
-        URI uri = new URI("http://localhost:" + port + "/events/create");
-        ResponseEntity<EventModel> response = this.restTemplate.postForEntity(uri, request1, EventModel.class);
+    public void eventsCreate() throws Exception {
+        ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
+                .post("/events")
+                .accept(MediaType.APPLICATION_JSON)
+                .content(request1)
+                .contentType(MediaType.APPLICATION_JSON));
 
-        System.out.println(response.getBody());
+
+        resultActions.andExpect(status().isOk())
+                .andExpect(jsonPath("$.eventId", notNullValue()))
+                .andExpect(jsonPath("$.entityType", notNullValue()))
+                .andExpect(jsonPath("$.entityId", notNullValue()))
+                .andExpect(jsonPath("$.type", notNullValue()))
+                .andExpect(jsonPath("$._links", notNullValue()))
+//                .andExpect(jsonPath("$._links.Client", notNullValue()))
+//                .andExpect(jsonPath("$._links.Client.local", notNullValue()))
+
+               ;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     private String request1 = "{\n" +

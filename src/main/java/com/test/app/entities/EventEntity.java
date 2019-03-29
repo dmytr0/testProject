@@ -16,8 +16,10 @@ public class EventEntity {
     private String entityId;
     @Column(name = "type")
     private String type;
-    @Column(name = "entity")
+    @Column(name = "entity", length = 2000, columnDefinition = "text")
     private String entity;
+    @Column(name = "_links", length = 2000, columnDefinition = "text")
+    private String links;
 
     public EventEntity() {
     }
@@ -67,7 +69,23 @@ public class EventEntity {
         return this;
     }
 
+    public String getLinks() {
+        return links;
+    }
+
+    public void setLinks(String links) {
+        this.links = links;
+    }
+
+    @Override
     public String toString() {
-        return "EventEntity(eventId=" + this.getEventId() + ", entityType=" + this.getEntityType() + ", entityId=" + this.getEntityId() + ", type=" + this.getType() + ", entity=" + this.getEntity() + ")";
+        return "EventEntity{" +
+                "eventId='" + eventId + '\'' +
+                ", entityType='" + entityType + '\'' +
+                ", entityId='" + entityId + '\'' +
+                ", type='" + type + '\'' +
+                ", entity='" + entity + '\'' +
+                ", links='" + links + '\'' +
+                '}';
     }
 }

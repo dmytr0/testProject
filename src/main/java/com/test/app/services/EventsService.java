@@ -12,6 +12,7 @@ import org.springframework.hateoas.Link;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
@@ -36,9 +37,10 @@ public class EventsService {
     }
 
     public EventModel createEvent(String event) {
-        System.out.println(event);
         EventModel model = parseEvent(event);
+        System.out.println("model: " + model);
         EventEntity eventEntity = mapper.modelToEntity(model);
+        System.out.println("entity " + eventEntity);
         EventEntity entity = repository.save(eventEntity);
         return convert(entity);
     }
@@ -55,8 +57,6 @@ public class EventsService {
 
     private EventModel convert(EventEntity entity) {
         EventModel event = mapper.entityToModel(entity);
-        Link self = linkTo(EventsController.class).slash(event.getEventId()).withSelfRel();
-        event.add(self);
         return event;
     }
 

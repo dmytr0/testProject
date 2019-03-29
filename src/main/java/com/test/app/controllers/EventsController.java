@@ -12,22 +12,22 @@ public class EventsController {
     @Autowired
     private EventsService service;
 
-    @GetMapping("get/{id}")
+    @GetMapping("{id}")
     public EventModel getEvent(@PathVariable("id") String id) {
         return service.getEvent(id);
     }
 
-    @PostMapping("create")
+    @PostMapping
     public EventModel createEvent(@RequestBody String event) {
         return service.createEvent(event);
     }
 
-    @PutMapping("update")
+    @PutMapping
     public EventModel updateEvent(@RequestBody String event) {
         return service.updateEvent(event);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("{id}")
     public void deleteEvent(@PathVariable("id") String id) {
         service.deleteEvent(id);
     }
