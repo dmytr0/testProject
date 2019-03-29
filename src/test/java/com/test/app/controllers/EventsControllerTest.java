@@ -1,25 +1,19 @@
 package com.test.app.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.test.app.entities.EventModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import java.io.IOException;
-
-import static org.hamcrest.Matchers.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,7 +25,7 @@ public class EventsControllerTest {
 
 
     @Test
-    public void eventsCreate() throws Exception {
+    public void clientActivatedEventsCreate() throws Exception {
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
                 .post("/events")
                 .accept(MediaType.APPLICATION_JSON)
@@ -45,24 +39,30 @@ public class EventsControllerTest {
                 .andExpect(jsonPath("$.entityId", notNullValue()))
                 .andExpect(jsonPath("$.type", notNullValue()))
                 .andExpect(jsonPath("$._links", notNullValue()))
-//                .andExpect(jsonPath("$._links.Client", notNullValue()))
-//                .andExpect(jsonPath("$._links.Client.local", notNullValue()))
-
-               ;
+                .andExpect(jsonPath("$._links.Client", notNullValue()))
+                .andExpect(jsonPath("$._links.['Client.local']", notNullValue()));
     }
 
+    @Test
+    public void billerUpdateEventsCreate() throws Exception {
+        ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
+                .post("/events")
+                .accept(MediaType.APPLICATION_JSON)
+                .content(request2)
+                .contentType(MediaType.APPLICATION_JSON));
 
 
-
-
-
-
-
-
-
-
-
-
+        resultActions.andExpect(status().isOk())
+                .andExpect(jsonPath("$.eventId", notNullValue()))
+                .andExpect(jsonPath("$.entityType", notNullValue()))
+                .andExpect(jsonPath("$.entityId", notNullValue()))
+                .andExpect(jsonPath("$.type", notNullValue()))
+                .andExpect(jsonPath("$._links", notNullValue()))
+                .andExpect(jsonPath("$._links.Biller", notNullValue()))
+                .andExpect(jsonPath("$._links.['Biller.local']", notNullValue()))
+                .andExpect(jsonPath("$._links.self", notNullValue()))
+                .andExpect(jsonPath("$._links.['self.local']", notNullValue()));
+    }
 
 
     private String request1 = "{\n" +

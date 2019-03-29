@@ -1,21 +1,16 @@
 package com.test.app.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.test.app.controllers.EventsController;
 import com.test.app.entities.EventEntity;
 import com.test.app.entities.EventModel;
 import com.test.app.mapStruct.EventMapper;
 import com.test.app.repository.EventRepository;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.Link;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Optional;
-
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 @Service
 public class EventsService {
@@ -38,9 +33,7 @@ public class EventsService {
 
     public EventModel createEvent(String event) {
         EventModel model = parseEvent(event);
-        System.out.println("model: " + model);
         EventEntity eventEntity = mapper.modelToEntity(model);
-        System.out.println("entity " + eventEntity);
         EventEntity entity = repository.save(eventEntity);
         return convert(entity);
     }
@@ -65,7 +58,7 @@ public class EventsService {
         try {
             eventModel = objectMapper.readValue(json, EventModel.class);
         } catch (IOException e) {
-            log.error("Error parsing "  + e.getMessage(), e);
+            log.error("Error parsing " + e.getMessage(), e);
         }
         return eventModel;
     }
