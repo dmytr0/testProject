@@ -1,65 +1,63 @@
 package com.test.app.services;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.app.entities.EventEntity;
-import com.test.app.entities.EventModel;
-import com.test.app.mapStruct.EventMapper;
+import com.test.app.exceptions.ValidationException;
 import com.test.app.repository.EventRepository;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.Optional;
 
 @Service
 public class EventsService {
 
-    private static final Logger log = org.apache.logging.log4j.LogManager.getLogger(EventsService.class);
+    private final EventRepository repository;
 
-    @Autowired
-    private ObjectMapper objectMapper;
-
-    @Autowired
-    private EventRepository repository;
-
-    @Autowired
-    private EventMapper mapper;
-
-    public EventModel getEvent(String id) {
-        Optional<EventEntity> eventEntity = repository.findById(id);
-        return eventEntity.map(this::convert).orElse(null);
+    public EventsService(EventRepository repository) {
+        this.repository = repository;
     }
 
-    public EventModel createEvent(String event) {
-        EventModel model = parseEvent(event);
-        EventEntity eventEntity = mapper.modelToEntity(model);
-        EventEntity entity = repository.save(eventEntity);
-        return convert(entity);
+    public EventEntity getEvent(String id) {
+        Optional<EventEntity> eventEntity = repository.findById(id);
+        return eventEntity.orElse(null);
+    }
+
+    public EventEntity createEvent(EventEntity event) {
+        validate(event);
+        return repository.save(event);
     }
 
     public void deleteEvent(String id) {
         repository.deleteById(id);
     }
 
-    public EventModel updateEvent(String event) {
-        EventEntity eventEntity = mapper.modelToEntity(parseEvent(event));
-        EventEntity entity = repository.save(eventEntity);
-        return convert(entity);
+    public EventEntity updateEvent(EventEntity event) {
+        validate(event);
+        return repository.save(event);
     }
 
-    private EventModel convert(EventEntity entity) {
-        EventModel event = mapper.entityToModel(entity);
-        return event;
-    }
-
-    private EventModel parseEvent(String json) {
-        EventModel eventModel = null;
-        try {
-            eventModel = objectMapper.readValue(json, EventModel.class);
-        } catch (IOException e) {
-            log.error("Error parsing " + e.getMessage(), e);
+    private void validate(EventEntity entity) {
+        if (isEmpty(entity.getEntity())) {
+            throw new ValidationException("entity can't be empty");
         }
-        return eventModel;
+        if (isEmpty(entity.getEntityId())) {
+            throw new ValidationException("entity id can't be empty");
+        }
+        if (isEmpty(entity.getEntityType())) {
+            throw new ValidationException("entity type can't be empty");
+        }
+        if (isEmpty(entity.getEventId())) {
+            throw new ValidationException("event id can't be empty");
+        }
+        if (isEmpty(entity.getType())) {
+            throw new ValidationException("event type can't be empty");
+        }
+        if (isEmpty(entity.getLinks())) {
+            throw new ValidationException("links can't be empty");
+        }
+
+    }
+
+    private boolean isEmpty(String value) {
+        return value == null || value.isEmpty();
     }
 }

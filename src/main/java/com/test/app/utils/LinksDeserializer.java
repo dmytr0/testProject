@@ -18,13 +18,13 @@ public class LinksDeserializer extends StdDeserializer<List<Link>> {
         this(null);
     }
 
-    public LinksDeserializer(Class<?> vc) {
+    private LinksDeserializer(Class<?> vc) {
         super(vc);
     }
 
 
     @Override
-    public List<Link> deserialize(JsonParser p, DeserializationContext ctx) throws IOException, JsonProcessingException {
+    public List<Link> deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
         JsonToken token = p.getCurrentToken();
 
         List<Link> result = new ArrayList<>();

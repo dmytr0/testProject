@@ -123,7 +123,8 @@ public class EventsControllerTest {
     public void clientActivatedEventsUpdate() throws Exception {
         clientActivatedEventsCreate();
 
-        EventModel updatedModel = request1Model.setType("AnotherType");
+        request1Model.setType("AnotherType");
+        EventModel updatedModel = request1Model;
         String json = JsonParser.prepareObjectJson(updatedModel);
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
                 .put("/events")
@@ -146,7 +147,8 @@ public class EventsControllerTest {
     public void billerUpdateEventsUpdate() throws Exception {
         billerUpdateEventsCreate();
 
-        EventModel updatedModel = request2Model.setType("AnotherType2");
+        request2Model.setType("AnotherType2");
+        EventModel updatedModel = request2Model;
         String json = JsonParser.prepareObjectJson(updatedModel);
 
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders

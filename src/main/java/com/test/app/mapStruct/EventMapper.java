@@ -15,6 +15,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface EventMapper {
 
+
     @Mapping(source = "links", target = "links", qualifiedByName = "stringToLinks")
     EventModel entityToModel(EventEntity entity);
 
@@ -22,30 +23,18 @@ public interface EventMapper {
     EventEntity modelToEntity(EventModel model);
 
     @Named("linksToString")
-    default String linksToString(List<Link> links) {
-        try {
-            if (links == null || links.isEmpty()) {
-                return null;
-            }
-            return JsonParser.prepareObjectJson(links);
-        } catch (IOException e) {
-            //log error
-            e.printStackTrace();
+    default String linksToString(List<Link> links) throws IOException {
+        if (links == null || links.isEmpty()) {
+            return null;
         }
-        return null;
+        return JsonParser.prepareObjectJson(links);
     }
 
     @Named("stringToLinks")
-    default List<Link> stringToLinks(String links) {
-        try {
-            if (links == null || links.isEmpty()) {
-                return Collections.emptyList();
-            }
-            return JsonParser.parseListJson(links, Link.class);
-        } catch (IOException e) {
-            //log error
-            e.printStackTrace();
+    default List<Link> stringToLinks(String links) throws IOException {
+        if (links == null || links.isEmpty()) {
+            return Collections.emptyList();
         }
-        return Collections.emptyList();
+        return JsonParser.parseListJson(links, Link.class);
     }
 }
