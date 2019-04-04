@@ -30,14 +30,13 @@ public class EventsController {
 
     @PostMapping
     public EventModel createEvent(@RequestBody EventModel event) {
-        log.info("create event " + event.getLinks());
-        throw new RuntimeException();
-//        return mapper.entityToModel(service.createEvent(mapper.modelToEntity(event)));
+        log.info("create event " + event);
+        return mapper.entityToModel(service.createEvent(mapper.modelToEntity(event)));
     }
 
     @PutMapping("{id}")
     public EventModel updateEvent(@PathVariable("id") String id, @RequestBody EventModel event) {
-        log.info("update request " + event.getLinks());
+        log.info("update request " + event);
         event.setEventId(id);
         return mapper.entityToModel(service.updateEvent(mapper.modelToEntity(event)));
     }

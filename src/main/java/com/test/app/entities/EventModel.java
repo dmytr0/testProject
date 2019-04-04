@@ -2,14 +2,17 @@ package com.test.app.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.test.app.annotations.JsonRawObject;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.hateoas.ResourceSupport;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @EqualsAndHashCode(callSuper = true)
-@Data
+@Getter
+@Setter
+@ToString(callSuper = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class EventModel extends ResourceSupport {
+public class EventModel extends CustomResourceSupport {
 
     private String eventId;
     private String entityType;

@@ -1,7 +1,6 @@
 package com.test.app.utils;
 
 import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
@@ -23,6 +22,7 @@ public class LinksDeserializer extends StdDeserializer<List<Link>> {
     }
 
 
+    @SuppressWarnings("unchecked")
     @Override
     public List<Link> deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
         JsonToken token = p.getCurrentToken();
