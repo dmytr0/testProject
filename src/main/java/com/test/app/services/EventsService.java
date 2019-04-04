@@ -35,7 +35,7 @@ public class EventsService {
         return repository.save(event);
     }
 
-    private void validate(EventEntity entity) {
+    void validate(EventEntity entity) {
         if (isEmpty(entity.getEntity())) {
             throw new ValidationException("entity can't be empty");
         }
