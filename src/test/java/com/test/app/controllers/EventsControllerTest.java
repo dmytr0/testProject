@@ -127,7 +127,7 @@ public class EventsControllerTest {
         EventModel updatedModel = request1Model;
         String json = JsonParser.prepareObjectJson(updatedModel);
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-                .put("/events")
+                .put("/events/G5A1AY8MPHL3RGPSYAGWA6XJ9C")
                 .accept(MediaType.APPLICATION_JSON)
                 .content(json)
                 .contentType(MediaType.APPLICATION_JSON));
@@ -152,7 +152,7 @@ public class EventsControllerTest {
         String json = JsonParser.prepareObjectJson(updatedModel);
 
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-                .put("/events")
+                .put("/events/9R4XL2H61MR6XZNHBL57LJ9TH8")
                 .accept(MediaType.APPLICATION_JSON)
                 .content(json)
                 .contentType(MediaType.APPLICATION_JSON));
